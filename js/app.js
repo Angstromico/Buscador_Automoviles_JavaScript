@@ -9,6 +9,7 @@ const precio = document.getElementById('precio');
 const color = document.getElementById('color');
 const min = document.getElementById('minimo');
 const max = document.getElementById('maximo');
+const btnReset = document.getElementById('btnReset');
 const maxYear = new Date().getFullYear();
 const minYear = maxYear - 11;
 //Variable para guardar elecciones de Usuario
@@ -16,7 +17,7 @@ let datosBusqueda = {
   marca: '',
   year: '',
   puertas: '',
-  transmisión: '',
+  transmision: '',
   color: '',
   min: '',
   max: '',
@@ -69,7 +70,34 @@ color.addEventListener('input', (e) => {
   // Mandar llamar la función de filtrar Autos
   filtrarAuto();
 });
+
+btnReset.addEventListener('click', () => {
+  resetFiltros();
+});
 //Funciones
+function resetFiltros() {
+  datosBusqueda = {
+    marca: '',
+    year: '',
+    puertas: '',
+    transmision: '',
+    color: '',
+    min: '',
+    max: '',
+  };
+
+  // Resetear selects
+  marca.value = '';
+  year.value = '';
+  min.value = '';
+  max.value = '';
+  puertas.value = '';
+  transmision.value = '';
+  color.value = '';
+
+  filtrarAuto();
+}
+
 function mostrarCarros(autosEleguidos = autos) {
   limpiarHTML();
   autosEleguidos.forEach((auto) => {

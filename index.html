@@ -38,7 +38,8 @@
           <div class="three columns">
             <label for="marca">Marca</label>
             <select class="u-full-width" id="marca" data-label="marca">
-              <option value="">Seleccione</option>
+              <option value="" disabled selected hidden>Seleccione</option>
+              <option value="">Ninguno</option>
               <option value="Audi">Audi</option>
               <option value="BMW">BMW</option>
               <option value="Mercedes Benz">Mercedes Benz</option>
@@ -50,13 +51,15 @@
           <div class="three columns">
             <label for="year">Año</label>
             <select class="u-full-width" id="year" data-label="year">
-              <option value="">Seleccione</option>
+              <option value="" disabled selected hidden>Seleccione</option>
+              <option value="">Ninguno</option>
             </select>
           </div>
           <div class="three columns">
             <label for="minimo">Precio Min</label>
             <select class="u-full-width" id="minimo" data-label="min">
-              <option value="">Seleccione</option>
+              <option value="" disabled selected hidden>Seleccione</option>
+              <option value="">Ninguno</option>
               <option value="20000">20,000</option>
               <option value="30000">30,000</option>
               <option value="40000">40,000</option>
@@ -70,7 +73,8 @@
           <div class="three columns">
             <label for="maximo">Precio Max</label>
             <select class="u-full-width" id="maximo" data-label="max">
-              <option value="">Seleccione</option>
+              <option value="" disabled selected hidden>Seleccione</option>
+              <option value="">Ninguno</option>
               <option value="20000">20,000</option>
               <option value="30000">30,000</option>
               <option value="40000">40,000</option>
@@ -85,7 +89,8 @@
             <div class="four columns">
               <label for="puertas">Puertas</label>
               <select class="u-full-width" id="puertas" data-label="puertas">
-                <option value="">Seleccione</option>
+                <option value="" disabled selected hidden>Seleccione</option>
+                <option value="">Ninguno</option>
                 <option value="2">2</option>
                 <option value="4">4</option>
               </select>
@@ -97,7 +102,8 @@
                 id="transmision"
                 data-label="'transmision"
               >
-                <option value="">Seleccione</option>
+                <option value="" disabled selected hidden>Seleccione</option>
+                <option value="">Ninguno</option>
                 <option value="automatico">Automática</option>
                 <option value="manual">Manual</option>
               </select>
@@ -105,12 +111,20 @@
             <div class="four columns">
               <label for="color">Color</label>
               <select class="u-full-width" id="color" data-label="color">
-                <option value="">Seleccione</option>
+                <option value="" disabled selected hidden>Seleccione</option>
+                <option value="">Ninguno</option>
                 <option value="Negro">Negro</option>
                 <option value="Azul">Azul</option>
                 <option value="Blanco">Blanco</option>
                 <option value="Rojo">Rojo</option>
               </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <button type="button" id="btnReset" class="u-full-width">
+                Limpiar Filtros
+              </button>
             </div>
           </div>
         </div>
