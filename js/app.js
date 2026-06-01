@@ -10,8 +10,12 @@ const color = document.getElementById('color');
 const min = document.getElementById('minimo');
 const max = document.getElementById('maximo');
 const btnReset = document.getElementById('btnReset');
+const selects = document.querySelectorAll('select');
 const maxYear = new Date().getFullYear();
 const minYear = maxYear - 11;
+
+let autos = []; // Global variable to store fetched data
+
 //Variable para guardar elecciones de Usuario
 let datosBusqueda = {
   marca: '',
@@ -24,9 +28,73 @@ let datosBusqueda = {
 };
 //Eventos
 document.addEventListener('DOMContentLoaded', () => {
-  mostrarCarros(); //Muestra Carros al cargar
+  obtenerAutos(); // Obtener autos de JSON
   mostrarAños(); //Muestra años en Menú desplegable
 });
+
+async function obtenerAutos() {
+    mostrarLoading();
+    deshabilitarFiltros();
+
+    try {
+        const respuesta = await fetch('data/autos.json');
+        const resultado = await respuesta.json();
+        
+        // Simular delay de 3 segundos
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        
+        autos = resultado;
+        mostrarCarros(autos);
+    } catch (error) {
+        console.log(error);
+        const alerta = document.createElement('DIV');
+        alerta.classList.add('alerta', 'error');
+        alerta.textContent = 'Hubo un error al cargar los datos';
+        resultado.appendChild(alerta);
+    } finally {
+        ocultarLoading();
+        habilitarFiltros();
+    }
+}
+
+function mostrarLoading() {
+    limpiarHTML();
+    const spinner = document.createElement('DIV');
+    spinner.classList.add('sk-chase');
+    spinner.innerHTML = `
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+    `;
+    
+    const textoLoading = document.createElement('P');
+    textoLoading.classList.add('loading-text');
+    textoLoading.textContent = 'Cargando catálogo de autos...';
+
+    resultado.appendChild(spinner);
+    resultado.appendChild(textoLoading);
+}
+
+function ocultarLoading() {
+    const spinner = document.querySelector('.sk-chase');
+    const texto = document.querySelector('.loading-text');
+    if(spinner) spinner.remove();
+    if(texto) texto.remove();
+}
+
+function deshabilitarFiltros() {
+    selects.forEach(select => select.disabled = true);
+    btnReset.disabled = true;
+}
+
+function habilitarFiltros() {
+    selects.forEach(select => select.disabled = false);
+    btnReset.disabled = false;
+}
+
 //Evento para Registrar datos de Usuario
 marca.addEventListener('input', (e) => {
   datosBusqueda.marca = e.target.value;
