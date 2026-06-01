@@ -214,5 +214,122 @@
 		"puertas": 4,
 		"color": "Negro",
 		"transmision": "automatico"
-	}
+	},
+    {
+        "marca": "Porsche",
+        "modelo": "911 Carrera",
+        "year": 2023,
+        "precio": 95000,
+        "puertas": 2,
+        "color": "Rojo",
+        "transmision": "automatico"
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo": "Corvette C8",
+        "year": 2022,
+        "precio": 85000,
+        "puertas": 2,
+        "color": "Blanco",
+        "transmision": "automatico"
+    },
+    {
+        "marca": "Tesla",
+        "modelo": "Model S",
+        "year": 2023,
+        "precio": 90000,
+        "puertas": 4,
+        "color": "Negro",
+        "transmision": "automatico"
+    },
+    {
+        "marca": "Ford",
+        "modelo": "Mustang Fastback",
+        "year": 1967,
+        "precio": 65000,
+        "puertas": 2,
+        "color": "Azul",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo": "Camaro SS",
+        "year": 1969,
+        "precio": 75000,
+        "puertas": 2,
+        "color": "Negro",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Dodge",
+        "modelo": "Charger R/T",
+        "year": 1970,
+        "precio": 80000,
+        "puertas": 2,
+        "color": "Naranja",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Volkswagen",
+        "modelo": "Beetle",
+        "year": 1965,
+        "precio": 15000,
+        "puertas": 2,
+        "color": "Blanco",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Mercedes Benz",
+        "modelo": "300SL Gullwing",
+        "year": 1955,
+        "precio": 99000,
+        "puertas": 2,
+        "color": "Plata",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Toyota",
+        "modelo": "Supra MK4",
+        "year": 1998,
+        "precio": 95000,
+        "puertas": 2,
+        "color": "Blanco",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Ferrari",
+        "modelo": "F40",
+        "year": 1987,
+        "precio": 99999,
+        "puertas": 2,
+        "color": "Rojo",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Lamborghini",
+        "modelo": "Countach",
+        "year": 1985,
+        "precio": 90000,
+        "puertas": 2,
+        "color": "Blanco",
+        "transmision": "manual"
+    },
+    {
+        "marca": "Hyundai",
+        "modelo": "Ioniq 5",
+        "year": 2023,
+        "precio": 48000,
+        "puertas": 4,
+        "color": "Gris",
+        "transmision": "automatico"
+    },
+    {
+        "marca": "Kia",
+        "modelo": "EV6",
+        "year": 2022,
+        "precio": 45000,
+        "puertas": 4,
+        "color": "Azul",
+        "transmision": "automatico"
+    }
 ]
