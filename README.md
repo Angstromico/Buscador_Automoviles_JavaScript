@@ -60,4 +60,4 @@ Este proyecto no requiere de dependencias de Node.js pesadas ni compilación.
 
 **Manuel Morales**
 *   [LinkedIn](https://www.linkedin.com/in/manuel-esteban-morales-zuarez-68573b189/)
-*   [Portafolio / Web](https://buscador-automoviles-manuel-morales.netlify.app)
+*   [Web](https://buscador-automoviles-manuel-morales.netlify.app)
